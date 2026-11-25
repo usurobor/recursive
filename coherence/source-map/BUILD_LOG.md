@@ -91,3 +91,42 @@ All pages below were opened with WebFetch on 2026-11-25. Quotes in sources.csv w
   - Report mirrors: https://bugboard.rsecloud.com/report/2199174, https://bugboard.rsecloud.com/report/2298307 and https://vulners.com/hackerone/H1:2199174
 - SM-029 TrialsTracker: same page as SM-002 A.
 - Scientific-publishing survey (no row): https://retractionwatch.com/2023/08/31/stanford-president-retracts-two-science-papers-following-investigation
+
+## Round 2 (validator R1 fixes, 2026-11-25)
+
+Pages fetched in round 2:
+- https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0351197 (twice): Fig 2 paragraph and references [1]-[4]; confirmed the contiguous span "the Dataset 1 and Dataset 2 rows in Figure 1 of [4], despite representing different conditions".
+- https://www.mdpi.com/2306-5354/10/2/203: Bioengineering 2023;10(2):203, published 2023-02-03; Figure 1 caption; no retraction notice in page text.
+- https://uksa.statisticsauthority.gov.uk/correspondence/response-from-sir-robert-chote-to-sarah-olney-mp-public-sector-debt (twice): span ending "neither of which is the case", including the en dash before "neither".
+- https://fullfact.org/politics/david-lammy-deputy-pm-correction/: full sentence ending "not 4,000, as Mr Lammy suggested."
+- https://www.presidency.ucsb.edu/documents/address-before-joint-session-the-congress-4 (twice): "Three-point-five million people from ages 140 to 149." is followed by an interjection; "And money is being paid to many of them, and we're searching right now." comes later.
+- https://cveawg.mitre.org/api/cve/CVE-2020-19909: containers.cna.providerMetadata.dateUpdated 2023-08-28T08:04:05.477Z.
+- https://www.ipso.co.uk/rulings/02269-25/: para. 15 span "the publication had twice declined ... when asked."
+- https://regulations.justia.com/regulations/fedreg/2024/08/15/2024-18289.html: "Voluntary Exclusion Agreement".
+- FTC promotion attempt:
+  - https://www.digitaljournal.com/pr/news/press-advantage/content-at-scale-announces-major-update-to-free-ai-content-detector: 2023-07-25 press release with "98.3%".
+  - https://huggingface.co/andreas122001/roberta-academic-detector and https://huggingface.co/andreas122001/roberta-wiki-detector/raw/main/README.md: neither shows 53.2 or 74.5.
+
+Changes per row:
+- SM-005 (blocking): B corrected. The notice compares A's Fig 2 with Fig 2 of LGD_Net [2] (published 2025-08-08, after A, and itself retracted) and with Figure 1 of Bioengineering 2023 [4] (published 2023-02-03, same first two authors).
+  - B is now [4], which predates A. binding_rule, artifact_b, finding_type, b_access and b_date were re-derived. The finding quote now covers [4], with one marked elision. LGD_Net is recorded in notes.
+  - Status stays verified. Caveat: the row labels inside [4] Figure 1 were not visible to the text fetcher; the notice states the match.
+- SM-006 (blocking):
+  - Finding quote now ends "neither of which is the case".
+  - finding_type restated as "untrue on its natural reading".
+  - decision_status now uses the authority's form ("letter from the Chair").
+  - b_access explains that the PM's office relied on the OBR forecast.
+- SM-007 (blocking): claim quote extended with a marked elision to "And money is being paid to many of them". The locator states that the rating is the finding.
+- SM-008 (blocking): finding quote is now the full 25-word sentence, including "not 4,000, as Mr Lammy suggested."
+- SM-014 (blocking): finding quote corrected to the verbatim span ending "when asked."
+- SM-002: a_date says no dated version is available. The field values (completion 2017-03-31, due 2018-03-31) moved to notes.
+- SM-003: finding_date is now 2023-08-28, the CNA update carrying the quoted NOTE. finding_type and notes say the overflow was real and the dispute concerns security impact.
+- SM-010: ground_truth 5 -> 4. "Voluntary Exclusion Agreement" replaces the wrong term.
+- SM-029: candidate -> rejected (no formal authority, same ground as SM-031).
+- SM-009: notes justify it as a rule-coherence check and flag it as borderline for human acceptance.
+- SM-030: scores blanked as unassessed.
+- SM-001, 016, 017, 025: latest_case_date put into "date (basis)" or "unknown (basis)" form.
+- SM-004 and SM-020: validator notes added and marked as not re-checked.
+- SM-011: promotion attempt recorded. It stays candidate because B (the 53.2% result) was not located.
+- Schema: quote columns now allow marked elisions; scores may be blank on unopened rejected rows.
+- SUMMARY: counts are now 10/18/5, and line 4 says why the three rows were chosen.

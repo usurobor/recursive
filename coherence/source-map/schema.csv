@@ -17,7 +17,7 @@ license_or_terms,Source mineability,source,free text; 'not checked' allowed,Reus
 volume,Source mineability,source,number with basis | unknown,"Count of decisions, only when substantiated."
 period,Source mineability,source,free text,Time span covered.
 cadence,Source mineability,source,free text,How often new decisions appear.
-latest_case_date,Source mineability,source,YYYY-MM-DD with basis | unknown,Latest decision date the builder could substantiate.
+latest_case_date,Source mineability,source,YYYY-MM-DD (basis) | unknown (basis),Latest decision date the builder could substantiate.
 finding_type,Sample finding,sample,e.g. unsubstantiated; contradicted; rule violation; fabricated/falsified; disputed; or the authority's more precise term,What the authority found (D3).
 decision_status,Sample finding,sample,e.g. alleged; settled; adjudicated; maintainer ruling; audit finding; or the authority's term,How the authority decided (D3).
 sample_case_url,Sample proof,sample,URL,The decision document.
@@ -26,8 +26,8 @@ sample_a_url,Sample proof,sample,URL | blank with reason in a_access,Independent
 sample_a_locator,Sample proof,sample,free text,"Exact claim, code, entry or change within A."
 sample_b_url,Sample proof,sample,URL | blank with reason in sample_b_locator,Artifact B.
 sample_b_locator,Sample proof,sample,free text,"Where in B, or why B is unavailable (private, first public in the finding)."
-sample_claim_quote,Sample proof,sample,"verbatim, under ~25 words","Text of A at its locator (for code/data: the hunk, field or entry)."
-sample_finding_quote,Sample proof,sample,"verbatim, under ~25 words",Passage of the decision that establishes the finding.
+sample_claim_quote,Sample proof,sample,"verbatim span, under ~25 words; elisions marked [...]","Text of A at its locator (for code/data: the hunk, field or entry)."
+sample_finding_quote,Sample proof,sample,"verbatim span, under ~25 words; elisions marked [...]",Passage of the decision that establishes the finding.
 a_access,Sample timing and access,sample,free text,"Route used to reach A and any limits (mirror, amended, removed)."
 b_access,Sample timing and access,sample,free text,Route to B and whether B was public before the finding.
 a_date,Sample timing and access,sample,date with basis,Date of the version of A under review.
@@ -35,9 +35,9 @@ b_date,Sample timing and access,sample,date with basis | private,Date B became p
 finding_date,Sample timing and access,sample,date with basis,Date of the decision.
 quote_level,Sample timing and access,sample,both_verbatim | finding_only | none (+ note),Which quotes were checked verbatim at their locators by the builder.
 blind_testable,Sample timing and access,sample,Y | N | unknown,Y only if the needed versions of A and B were public before the finding and can be reconstructed without revealing the outcome (D5).
-ground_truth,Ranking,sample,1-5,See rubric.
+ground_truth,Ranking,sample,1-5 | blank (unopened rejected row),See rubric.
 ground_truth_rationale,Ranking,sample,short text,Reason for the score.
-schema_stress,Ranking,sample,1-5,See rubric; 5 must name the distinction.
+schema_stress,Ranking,sample,1-5 | blank (unopened rejected row),See rubric; 5 must name the distinction.
 schema_stress_rationale,Ranking,sample,short text,Reason for the score.
 buyer,Ranking,source,free text | blank,Who pays for this review activity.
 buyer_value,Ranking,source,1-5,"See rubric; demand for the review activity, not for the dataset."
