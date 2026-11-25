@@ -1,0 +1,51 @@
+column,group,describes,allowed_values,definition
+id,Source identity,source,SM-NNN,Stable row identifier.
+name,Source identity,source,free text,"Name of the repeatable source (one regulator's decisions, one project's review process)."
+domain,Source identity,source,open list: advertising; securities; consumer finance; product safety; clinical research; scientific publishing; software; audit; procurement; transport safety; extended here with legal; fact-checking; official statistics; research integrity; press regulation; intellectual property; environment; platform moderation,Professional field of the source.
+publisher,Source identity,source,free text,Body that publishes the decisions.
+url,Source identity,source,URL,Entry point to the source as found by search (may be a list page or a representative decision).
+description,Source identity,source,free text,What the source contains.
+practitioner_terms,Source identity,source,semicolon list,The domain's own vocabulary for the decision. Search queries that actually found the sample are recorded in notes.
+relevance,Coherence fit,source,High | Medium | Low + reason,How directly the source's decisions compare a claim/change/transaction against evidence or a rule.
+artifact_a,Coherence fit,source,free text,Type of thing under review.
+artifact_b,Coherence fit,source,free text,Type of evidence or rule it is checked against.
+binding_rule,Coherence fit,source,one sentence,The rule that makes B binding on A.
+verdict_authority,Coherence fit,source,free text,Who decides.
+verdict_type,Coherence fit,source,free text (authority's term),Form of the decision.
+access_method,Source mineability,source,free text,How decisions can be retrieved; unopened routes are marked.
+license_or_terms,Source mineability,source,free text; 'not checked' allowed,Reuse terms with basis.
+volume,Source mineability,source,number with basis | unknown,"Count of decisions, only when substantiated."
+period,Source mineability,source,free text,Time span covered.
+cadence,Source mineability,source,free text,How often new decisions appear.
+latest_case_date,Source mineability,source,YYYY-MM-DD with basis | unknown,Latest decision date the builder could substantiate.
+finding_type,Sample finding,sample,e.g. unsubstantiated; contradicted; rule violation; fabricated/falsified; disputed; or the authority's more precise term,What the authority found (D3).
+decision_status,Sample finding,sample,e.g. alleged; settled; adjudicated; maintainer ruling; audit finding; or the authority's term,How the authority decided (D3).
+sample_case_url,Sample proof,sample,URL,The decision document.
+sample_case_locator,Sample proof,sample,free text,"Page, paragraph or section of the decision."
+sample_a_url,Sample proof,sample,URL | blank with reason in a_access,Independent copy of the dated version of A.
+sample_a_locator,Sample proof,sample,free text,"Exact claim, code, entry or change within A."
+sample_b_url,Sample proof,sample,URL | blank with reason in sample_b_locator,Artifact B.
+sample_b_locator,Sample proof,sample,free text,"Where in B, or why B is unavailable (private, first public in the finding)."
+sample_claim_quote,Sample proof,sample,"verbatim, under ~25 words","Text of A at its locator (for code/data: the hunk, field or entry)."
+sample_finding_quote,Sample proof,sample,"verbatim, under ~25 words",Passage of the decision that establishes the finding.
+a_access,Sample timing and access,sample,free text,"Route used to reach A and any limits (mirror, amended, removed)."
+b_access,Sample timing and access,sample,free text,Route to B and whether B was public before the finding.
+a_date,Sample timing and access,sample,date with basis,Date of the version of A under review.
+b_date,Sample timing and access,sample,date with basis | private,Date B became public.
+finding_date,Sample timing and access,sample,date with basis,Date of the decision.
+quote_level,Sample timing and access,sample,both_verbatim | finding_only | none (+ note),Which quotes were checked verbatim at their locators by the builder.
+blind_testable,Sample timing and access,sample,Y | N | unknown,Y only if the needed versions of A and B were public before the finding and can be reconstructed without revealing the outcome (D5).
+ground_truth,Ranking,sample,1-5,See rubric.
+ground_truth_rationale,Ranking,sample,short text,Reason for the score.
+schema_stress,Ranking,sample,1-5,See rubric; 5 must name the distinction.
+schema_stress_rationale,Ranking,sample,short text,Reason for the score.
+buyer,Ranking,source,free text | blank,Who pays for this review activity.
+buyer_value,Ranking,source,1-5,"See rubric; demand for the review activity, not for the dataset."
+buyer_value_rationale,Ranking,source,short text with basis,Reason and evidence basis.
+effort_first_10,Ranking,source,S | M | L,S up to one person-day; M more than one and up to five; L more than five.
+effort_rationale,Ranking,source,short text,Reason for the estimate.
+status,Review,review,candidate | verified | rejected,candidate: promising but incomplete; verified: sample receipt checks out; rejected: specific reason given.
+reject_reason,Review,review,free text,Required when rejected.
+verified_by,Review,review,agent:builder | agent:validator | ...,"Who verified the sample. Human acceptance is a separate decision, not recorded here."
+verified_date,Review,review,YYYY-MM-DD,Date of verification.
+notes,Review,review,free text,"Search terms that found the case, caveats, secondary links."

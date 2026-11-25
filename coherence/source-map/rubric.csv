@@ -1,0 +1,19 @@
+dimension,score,definition
+ground_truth,1,Informal or ambiguous judgment
+ground_truth,2,"Between 1 and 3 (e.g., contested or non-authoritative judgment with some evidence)"
+ground_truth,3,Specific documented finding with limited evidentiary support
+ground_truth,4,"Between 3 and 5 (e.g., formal finding whose basis is only partly inspectable)"
+ground_truth,5,"Explicit, authoritative determination with a basis the reviewer can inspect"
+schema_stress,1,Fits the FTC example cleanly
+schema_stress,2,Between 1 and 3
+schema_stress,3,An existing field needs a broader interpretation
+schema_stress,4,Between 3 and 5
+schema_stress,5,The sample exposes a distinction the schema cannot represent. Name it.
+buyer_value,1,No buyer identified
+buyer_value,2,Between 1 and 3 (buyer only loosely identified)
+buyer_value,3,Plausible buyer identified
+buyer_value,4,Between 3 and 5 (indirect evidence of spend)
+buyer_value,5,Evidence that an identifiable buyer already spends on this review
+effort_first_10,S,Up to one person-day to mine the first ten cases
+effort_first_10,M,More than one and up to five person-days
+effort_first_10,L,More than five person-days

@@ -1,0 +1,7 @@
+# Summary: source map, first pass (builder, 2026-11-25)
+
+1. **Domain coverage:** 33 source rows across 18 domains. The 10 verified samples span 8 domains: legal, clinical research, software, securities, scientific publishing, official statistics, fact-checking and research integrity. Advertising, the seed domain, has no verified row.
+2. **Status counts:** 10 verified (agent:builder), 19 candidate, 4 rejected. No row has human acceptance.
+3. **Blind-testable among verified samples:** 7 Y (SM-001, 002, 003, 005, 006, 007, 008); 2 N (SM-004 Presto and SM-010 ORI, where B stays private until the finding); 1 unknown (SM-009, where the order of the issue comment and the PR is not established).
+4. **Most schema stress:** SM-003 (CVE-2020-19909): the vendor calls the CVE bogus while MITRE keeps it as "disputed", which gives two verdicts where the schema holds one. SM-009 (matplotlib PR #31132): the check concerns who made the change (an AI agent), not what it says, under a rule stated in an issue thread rather than the written guide. SM-020 (BF Borgers): one order covers about 1,625 filings without naming them, so no single A can be bound to the finding.
+5. **Most common obstacle:** independent access to the dated A. Ads and news articles are removed or amended after the finding (FTC, ASA, IPSO), and some A's are anonymized or under a protective order (PCAOB, GAO). The Wayback Machine route was unavailable because this pass could open only URLs that search results surfaced.
