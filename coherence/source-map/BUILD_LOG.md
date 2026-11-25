@@ -141,10 +141,67 @@ No new pages fetched; all changes rest on round-1/2 fetches and the validator's 
 - SM-002 notes: states that the receipt has no dated version of A and that the pre-finding overdue status rests on the 2018-06-26 BMJ post; flagged for human review.
 - Open human-decision flags carried from R2: SM-009 (rule about who may make a change; verified count 10 vs 9) and SM-002 (no dated A).
 
-## Final verification (Claude, 2026-11-25)
+## Round 4 (external review of PR #1, 2026-11-25)
 
-Independent re-fetch of three proof quotes, outside the builder/validator loop:
-- SM-004 claim quote: verbatim in the 424B3 prospectus dated 2023-01-09, Summary > Overview, Voice bullet.
-- SM-004 finding quote: verbatim in Rel. 33-11352, para. 24, order dated 2025-01-14, findings made without admitting or denying. Apostrophe corrected to the order's curly form.
-- SM-008 finding quote: verbatim on Full Fact, 2025-11-12; the article reports Lammy's ministerial correction.
-Structural check: 33 rows, 50 columns, 18 domains, 10/18/5, no duplicate ids. SM-001, SM-004 and SM-010 have no B URL, each with an explanation in sample_b_locator (absence of a record; private until the order).
+The external reviewer's claims were treated as hypotheses. For each item: what was confirmed, what was not, and the pages fetched. Peter was present, and earlier refusals were retried.
+
+1. **SM-011 FTC Workado: partly confirmed; stays candidate.**
+   - Confirmed: the bloomz-560m-wiki-detector model card (https://huggingface.co/andreas122001/bloomz-560m-wiki-detector) names the thesis "Turning Poachers into Gamekeepers: Detecting Machine-Generated Text in Academia using Large Language Models" (Sivesind & Winje, NTNU) and links https://ntnuopen.ntnu.no/ntnu-xmlui/handle/11250/3078096.
+   - Confirmed from earlier rounds: the press release's 98.3% (2023-07-25) and the Exhibit A capture date of 2023-10-03.
+   - Confirmed: the FTC press release (https://www.ftc.gov/node/88167) announced a proposed settlement on 2025-04-28.
+   - Not confirmed: Table 7.6 (74.5% / 53.2%) and Figure 7.13 (11,973 of 22,500). The handle redirects to nva.sikt.no, a JavaScript app with no content; https://api.nva.unit.no/... redirects to the same; the ntnuopen ?show=full page was blocked; searches found no PDF.
+   - Also fetched: https://huggingface.co/datasets/NicolaiSivesind/human-vs-machine (no thesis link).
+   - Wayback retry (web.archive.org capture of contentatscale.ai/ai-content-detector): blocked ("Access to this website has been blocked").
+2. **SM-012 NAD: confirmed; buyer_value set to 5; stays candidate (no dated copy of the claim).**
+   - Decision page https://bbbprograms.org/media/newsroom/decisions/shark-neverchange: Dyson v. SharkNinja, "Clean Air 100%", Fast-Track SWIFT, 2026-05-20.
+   - Fee schedule https://bbbprograms.org/programs/advertising/nad/challenges: "Pricing effective January 1, 2026"; SWIFT $12,600 to $55,650.
+   - Archive https://bbbprograms.org/OnlineArchive: "more than 6,000 cases"; filters include claim type; subscription required.
+   - Secondary source: https://www.kelleydrye.com/viewpoints/blogs/ad-law-access/nad-announces-increases-to-filing-fees-for-2025 (2025 fees).
+   - Pages that did not help: https://bbbprograms.org/programs/all-programs/national-advertising-division/faqs (404); https://connect.bbbprograms.org/advertising-subscriptions (no archive details); bbbprograms.org NAD-Fast-Track-SWIFT page (404).
+3. **SM-001: scope confirmed and corrected; PhantomDocket not confirmed.**
+   - Page 1 (https://www.damiencharlotin.com/hallucinations/?page=1) confirms that the database includes "some judicial decisions where AI use was alleged but not confirmed" and four kinds of material (Fabricated 1915, False Quotes 614, Misrepresented 990, Outdated Advice 38). It also gives the latest entry date, 2026-11-20.
+   - Description, latest_case_date, effort_rationale and notes were corrected.
+   - PhantomDocket was not found: searches for "PhantomDocket", "Phantom Docket" and the 980/619 figures surfaced nothing.
+   - Pages opened while looking for it:
+     - https://blog.citp.princeton.edu/?p=19171 describes a different benchmark, LePhantomCite, with 1,300 excerpts and no case_id link.
+     - https://cyberlaw.stanford.edu/blog/2025/10/whos-submitting-ai-tainted-filings-in-court/ analysed court orders, not filings.
+     - https://dss.princeton.edu/catalog/resource8449 returned a CAPTCHA page.
+   - effort_first_10 stays M.
+4. **SM-009: confirmed.**
+   - https://api.github.com/repos/matplotlib/matplotlib/pulls/31132: author crabby-rathbun, created 2026-02-10T23:54:35Z, closed 2026-02-11T00:33:34Z.
+   - https://api.github.com/repos/matplotlib/matplotlib/issues/31130/comments: the maintainer comment was created 21:57:04Z and last edited 22:01:25Z.
+   - https://api.github.com/repos/matplotlib/matplotlib/issues/31132/comments: the closing comment cites the agent's website and "you are an OpenClaw AI agent".
+   - The claim quote is now the authorship field; the row is labelled a contributor-eligibility case. finding_date was corrected to 2026-02-11T00:33:34Z (UTC); the earlier "2026-02-10" inference used US local time.
+   - https://crabby-rathbun.github.io/mjrathbun-website/blog/posts/2026-02-10-matplotlib-pr-experience.html does not self-identify as AI, so blind_testable stays unknown.
+5. **SM-002: downgraded to candidate; blind_testable unknown.** The violationAnnotation could not be checked: https://clinicaltrials.gov/api/v2/studies/NCT02045901 was refused by the site (robots_disallowed). The missing piece is recorded.
+6. **SM-005: kept verified.** No visual check was possible, because the fetcher reads text only. The reviewer's visual check is recorded as unconfirmed, and the separate retraction reason is noted.
+7. **SM-004: confirmed; A replaced.**
+   - https://sec.gov/Archives/edgar/data/1822145/000121390022065582/0001213900-22-065582.txt is Form S-1, filed 2022-10-21, SEC file no. 333-267979. The sentence "Voice technology enables faster transactions and improved order accuracy by eliminating human order taking." is in Summary of the Prospectus > Overview.
+   - It matches the order's "five registration statements filed between October 21, 2022 and May 1, 2023".
+   - The 2023 prospectus moved to notes.
+
+Other retries:
+- https://github.com/curl/curl/pull/4166 now opens (SM-003 B; author bagder, opened 2019-07-29, closed, no merge marker shown).
+
+Recount: 9 verified, 19 candidate, 5 rejected. Among verified rows, blind-testable is 6 Y, 2 N, 1 unknown, across 7 verified domains. The shortfall against ten verified is caused by SM-002's downgrade, and no candidate could be promoted with a full receipt in this round.
+
+## Round 4b (PhantomDocket, 2026-11-25)
+
+Pages fetched:
+- https://huggingface.co/datasets/Arifov/PhantomDocket: 2,284 verified document records (work in progress; 5 missing). Fields include case_id (the Charlotin case identifier) and pdf_sha256. group takes the values hallucination / same_party / control_judge / control_other_party. PDFs are under documents/. Licence is CC0 1.0, with RIGHTS.md covering the filings (RIGHTS.md not opened).
+- https://dho.stanford.edu/wp-content/uploads/GenAI_Courts.pdf: "This yields 980 hallucination filings drawn from 619 cases." Section 4.2 covers docket matching; the PACER cost sentence is confirmed.
+- https://hai.stanford.edu/news/ai-might-be-flooding-state-court-houses-but-proving-it-is-another-matter: dated 2026-11-19; names PhantomDocket as a benchmark.
+
+Changes:
+- SM-001: notes and effort_rationale name PhantomDocket as the route for the first ten cases, and the control groups as negatives. effort_first_10 M -> S, because retrieval and hashing are already done.
+- SM-011: notes state that the thesis table is the single missing check. Status stays candidate.
+- Counts unchanged (9 / 19 / 5); SUMMARY re-checked by script.
+
+## Cleanup after validation round 4 (Claude, 2026-11-25)
+
+Non-blocking items from VALIDATION_R4.md, applied directly:
+- SM-011: sample_b_url, b_access, b_date now describe the thesis (the B named in sample_b_locator); the model card moved into b_access as context.
+- SM-004: removed the stale "424B3 is the version located" clause.
+- SM-012: removed the stale "Not opened in this pass".
+- SM-001: binding_rule notes non-US coverage; effort_rationale limits S to the 619 PhantomDocket cases.
+Claude independently confirmed PhantomDocket (HAI post, Stanford paper, Hugging Face card) before round 4b.
