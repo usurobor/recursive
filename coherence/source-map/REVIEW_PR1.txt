@@ -1,0 +1,28 @@
+I’d request one revision before merging PR #1⁠￼. The inventory counts check out: 33 sources across 18 domains, with 10 marked verified, 18 candidate, and 5 rejected. I compared all three tabs of Google Sheet⁠￼ against the Git CSVs, and the cell values match. The substantive review changes three conclusions: the FTC evidence is recoverable, an identifiable buyer already pays for advertising review, and there’s a better starting point for mining the court cases.
+
+1. The missing FTC evidence is in Table 7.6
+
+I found the developers’ original 2023 thesis. Table 7.6, printed page 55 (PDF page 70), gives both numbers the builder couldn’t find. On the Wikipedia test set, the academic RoBERTa detector achieved 74.5% overall accuracy and 53.2% recall on AI-generated text. Figure 7.13 gives the underlying count: 11,973 of 22,500 generated texts detected. The FTC complaint reports those same two measurements in paragraph 14. Developers’ thesis⁠￼ 
+
+The advertiser’s July 2023 press release independently preserves the 98.3% claim. Exhibit A of the complaint also preserves the charged webpage as captured on October 3, 2023. I’d promote SM-011 with the press release identified as a separate publication of the same claim, the thesis as B, and the consent order as the disposition. For a blind run, hand CA the advertiser’s release and the thesis. Keep the FTC exhibit and complaint on the evaluator’s side. That gives you a first advertising case where a reviewer can inspect every piece without Wayback. 
+
+2. SM-012 supplies the missing buyer evidence
+
+Dyson brought a National Advertising Division challenge against SharkNinja’s “Clean Air 100%” claim. NAD publishes the decision and a fee schedule for that review track. BBB National Programs also offers subscriptions to an archive of more than 6,000 advertising decisions, searchable by claim type. That warrants buyer_value = 5 under your rubric: an identifiable class of buyers uses a fee-based review service. The archive is also a real commercial comparison for your corpus. Demand for your particular receipts remains an open question. 
+
+3. Use PhantomDocket for the first ten legal cases
+
+Charlotin’s 2,338 count is accurate for the reviewed date. The database covers several kinds of hallucinated material and includes some cases where AI use was alleged but unconfirmed. The claim that almost all entries can be blind-tested has no support in this pass. Researchers who tried to recover the original filings describe the docket matching, missing documents, and paid retrieval it took. 
+
+Those researchers already did the expensive part you identified. Their paper reports 980 implicated filings from 619 cases. I checked the public PhantomDocket release: it contains the filing PDFs, their hashes, and a case_id linking each flagged filing to Charlotin’s ruling. I’d start the first ten there. The work left for your corpus is to identify the exact passage, independently check the cited authority, and compare CA’s finding with the court’s. PhantomDocket dataset⁠￼ 
+
+The three acceptance calls
+
+Row	My call	What I checked
+SM-009 · matplotlib	Include as a contributor-eligibility case.	The task explicitly admits a change checked against a rule. GitHub’s timestamps resolve the ordering: the maintainer’s comment favoring human contributors was last edited at 22:01 UTC, before the PR opened at 23:54 UTC on February 10. The closing comment explicitly ties the decision to the submitter’s identity. Replace the performance-oriented PR title in the receipt with evidence of authorship. Keep blind eligibility open until that evidence is pinned. 
+SM-002 · FDA	Candidate as submitted. Remove the blind Y.	The FDA finding is explicit. The current registry API response contains both the study data and a violationAnnotation naming the October 2026 finding. The receipt needs a dated, outcome-free version showing the relevant reporting state. The 2018 BMJ account corroborates an earlier delay. Registry response⁠￼ 
+SM-005 · PLOS	Keep verified for the image-label discrepancy.	I opened both figures. The earlier figure visibly labels Dataset 1 and Dataset 2. The later figure presents a recognizably similar sequence under labels including pneumonia, tuberculosis, and lung cancer. A reviewer can check the visual claim directly. PLOS separately gives compromised peer review as its reason for retraction. 
+
+One further repair is straightforward. SM-004 currently uses a sibling Presto prospectus. The October 21, 2022 registration statement contains the exact human-order-taking claim and matches the SEC order’s description of the filings under review. Use it as A. 
+
+I’d send the PR back for those row changes and a recount of blind_testable. For the next pass, Workado is the clearest demonstration of what CA is meant to catch; PhantomDocket is the strongest starting point for testing whether you can produce ten receipts economically.
