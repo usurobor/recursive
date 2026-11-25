@@ -140,3 +140,11 @@ No new pages fetched; all changes rest on round-1/2 fetches and the validator's 
 - SM-005 sample_a_locator: now points at the non-COVID columns of A's Fig 2 (pneumonia, tuberculosis, lung cancer, edema, consolidation lung).
 - SM-002 notes: states that the receipt has no dated version of A and that the pre-finding overdue status rests on the 2018-06-26 BMJ post; flagged for human review.
 - Open human-decision flags carried from R2: SM-009 (rule about who may make a change; verified count 10 vs 9) and SM-002 (no dated A).
+
+## Final verification (Claude, 2026-11-25)
+
+Independent re-fetch of three proof quotes, outside the builder/validator loop:
+- SM-004 claim quote: verbatim in the 424B3 prospectus dated 2023-01-09, Summary > Overview, Voice bullet.
+- SM-004 finding quote: verbatim in Rel. 33-11352, para. 24, order dated 2025-01-14, findings made without admitting or denying. Apostrophe corrected to the order's curly form.
+- SM-008 finding quote: verbatim on Full Fact, 2025-11-12; the article reports Lammy's ministerial correction.
+Structural check: 33 rows, 50 columns, 18 domains, 10/18/5, no duplicate ids. SM-001, SM-004 and SM-010 have no B URL, each with an explanation in sample_b_locator (absence of a record; private until the order).
