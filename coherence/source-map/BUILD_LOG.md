@@ -130,3 +130,13 @@ Changes per row:
 - SM-011: promotion attempt recorded. It stays candidate because B (the 53.2% result) was not located.
 - Schema: quote columns now allow marked elisions; scores may be blank on unopened rejected rows.
 - SUMMARY: counts are now 10/18/5, and line 4 says why the three rows were chosen.
+
+## Round 3 (validator R2 fixes, 2026-11-25)
+
+No new pages fetched; all changes rest on round-1/2 fetches and the validator's R2 reading of the transcript.
+- SUMMARY line 4: "six rows scored 5" -> "five rows scored 5 (SM-003, 009, 020, 022, 025)" (SM-030 was blanked in round 2). Every number in SUMMARY.md re-checked against sources.csv by script (/home/claude/scratch/check_summary.py).
+- SM-007 notes: the elision removes only the audience's "Not true!".
+- SM-029 notes: "kept candidate" clause removed (row is rejected).
+- SM-005 sample_a_locator: now points at the non-COVID columns of A's Fig 2 (pneumonia, tuberculosis, lung cancer, edema, consolidation lung).
+- SM-002 notes: states that the receipt has no dated version of A and that the pre-finding overdue status rests on the 2018-06-26 BMJ post; flagged for human review.
+- Open human-decision flags carried from R2: SM-009 (rule about who may make a change; verified count 10 vs 9) and SM-002 (no dated A).
